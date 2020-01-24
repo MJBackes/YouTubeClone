@@ -5,7 +5,6 @@ const VideoInfo = (props) => {
     return (
         <div className="VideoDescription">
             <h3 id="VideoTitle">{props.title}</h3>
-            <br/>
             <p id="Description">{props.description}</p>
         </div>
     );

@@ -1,29 +1,44 @@
 import React, {useState, useEffect} from 'react';
-import APIKeys from './APIKeys';
+import {Youtube} from './APIKeys';
 import Navbar from './Navbar';
 import VideoDisplay from './VideoDisplay';
 import VideoInfo from './VideoInfo';
+import RelatedVideoList from './RelatedVideoList';
+import axios from 'axios';
 import './App.css';
 
 function App() {
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
+  const [searchResults, setSearchResults] = useState();
+  const [currentVideo, setCurrentVideo] = useState(
+    {
+      title:"",
+      description:"",
+      videoId:""
+    });
+  
   useEffect(() => {
-    console.log(search)
+    axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${search}&type=video&key=${Youtube}`)
+        .then(response => {
+          setSearchResults(response.data);
+          });
   }, [search]);
+
   return (
     <div className="App">
         <Navbar 
-          onClick = {() => {
+          onSearchSubmit = {(event) => {
+            event.preventDefault();
             setSearch(document.getElementById("searchInput").value);
           }}
           />
         <div>
           <div id="VideoAndCommentsContainer">
             <div id="VideoContainer">
-                <VideoDisplay/>
+                <VideoDisplay video={currentVideo}/>
                 <VideoInfo 
-                    title="Video"
-                    description="asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfadsf"
+                    title={currentVideo.title? currentVideo.title.replace(/&#39;/gi,"'").replace(/&quot;/gi,'"').replace(/&amp;/gi,'&') : ""}
+                    description={currentVideo.description? currentVideo.description.replace(/&#39;/gi,"'").replace(/&quot;/gi,'"').replace(/&amp;/gi,'&') : ""}
                 />
             </div>
             <div id="CommentsContainer">
@@ -31,7 +46,10 @@ function App() {
             </div>
           </div>
           <div id="RelatedVideosContainer">
-
+              <RelatedVideoList 
+                results={searchResults}
+                onClick={setCurrentVideo}
+              />
           </div>
         </div>
     </div>

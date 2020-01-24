@@ -1,18 +1,10 @@
 import React from 'react';
 import './Navbar.css';
+import SearchForm from './SearchForm';
 const Navbar = (props) => {
     return (
         <div className="NavbarContainer">
-                <input
-                    type="text"
-                    placeholder="Search..."
-                    id="searchInput"
-                />
-                <button
-                    onClick={props.onClick}
-                >
-                    Search
-                </button>
+                <SearchForm onSubmit = {props.onSearchSubmit}/>
         </div>
     );
 }

@@ -1,0 +1,22 @@
+.relatedVideoCard{
+    display: block;
+    width:100%;
+}
+.videoThumbnail{
+    display: inline-block;
+    width:auto;
+    height:150px;
+    margin-right: 5%;
+    vertical-align: top;
+}
+.videoTitle{
+    word-wrap: break-word;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width:60%;
+    height: 150px;
+}
+.videoTitle h4{
+    margin-top: 0;
+}

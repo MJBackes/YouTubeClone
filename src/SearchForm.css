@@ -1,0 +1,28 @@
+#SearchFormContainer form input{
+    width:300px;
+    height:100%;
+    font-size: 20px;
+    border: none;
+    background-color: dimgray;
+    color:aliceblue;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    text-indent: 5px;
+    display:inline-block;
+}
+::placeholder{
+    color:aliceblue;
+    opacity: 1;
+    text-indent: 5px;
+}
+#SearchFormContainer form button{
+    width:auto;
+    height:100%;
+    margin-right: 5px;
+    background-color: red;
+    font-size: 20px;
+    border:none;
+    color: aliceblue;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
