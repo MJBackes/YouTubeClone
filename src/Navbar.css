@@ -1,0 +1,16 @@
+.NavbarContainer{
+    width: 100%;
+    height: 35px;
+    text-align: right;
+    background-color: darkslategrey;
+}
+.NavbarContainer > input{
+    width:300px;
+    font-size: 20px;
+}
+.NavbarContainer > button{
+    width:auto;
+    margin-right: 5px;
+    background-color: aquamarine;
+    font-size: 20px;
+}

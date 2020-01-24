@@ -1,0 +1,16 @@
+.VideoDisplayContainer{
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    margin-top: 10px;
+}
+#VideoInfoContainer{
+    width: 100%;
+}
+.VideoIFrame{
+    background-color: darkturquoise;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

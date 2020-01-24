@@ -1,16 +1,31 @@
 .App {
-  text-align: center;
+  height: 100%;
+  background-color: #282c34;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#VideoAndCommentsContainer{
+  top:10px;
+  width:75%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 20px;
+  height:1100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#RelatedVideosContainer{
+  width:20%;
+  background-color: #61dafb;
+  height: 1000px;
+  display:inline-block;
+  margin-right:5%;
+  margin-top:20px;
+  vertical-align: top;
+}
+
+#VideoContainer{
+  width:55vw;
+  height:30.9375vw;
+  margin-left:15%;
 }
 
 .App-header {
