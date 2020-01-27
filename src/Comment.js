@@ -31,14 +31,14 @@ const Comment = (props) => {
             <h6 className="commentPostTime">{props.comment.timeOfPost}</h6>
             <h4 className="userName">{props.comment.userName}</h4>
             <p className="commentBody">{props.comment.commentBody}</p>
-            <button  className="replyButton" onClick={() => props.setCommentToReplyTo(props.comment)}>Reply</button>
-            <button className="likeButton" onClick={() => 
+            <button className="replyButton" onClick={() => props.setCommentToReplyTo(props.comment)}>Reply</button>
+            <button  style={isLiked ? {backgroundColor: "#99ff99"} : {}} className="likeButton" onClick={() => 
             {
                 setIsLiked(!isLiked);
                 setIsDisliked(false);
             }}>Like</button>
             <span>{props.comment.totalLikes}</span>
-            <button className="dislikeButton" onClick={() => 
+            <button style={isDisliked ? {backgroundColor: "#ff9999"} : {}} className="dislikeButton" onClick={() => 
             {
                 setIsDisliked(!isDisliked);
                 setIsLiked(false);
@@ -57,13 +57,13 @@ const Comment = (props) => {
             <h4 className="userName">{props.comment.userName}</h4>
             <p className="commentBody">{props.comment.commentBody}</p>
             <button  className="replyButton" onClick={() => props.setCommentToReplyTo(props.comment)}>Reply</button>
-            <button className="likeButton" onClick={() => 
+            <button style={isLiked ? {backgroundColor: "#99ff99"} : {}} className="likeButton" onClick={() => 
             {
                 setIsLiked(!isLiked);
                 setIsDisliked(false);
             }}>Like</button>
             <span>{props.comment.totalLikes}</span>
-            <button className="dislikeButton" onClick={() => 
+            <button style={isDisliked ? {backgroundColor: "#ff9999"} : {}} className="dislikeButton" onClick={() => 
             {
                 setIsDisliked(!isDisliked);
                 setIsLiked(false);

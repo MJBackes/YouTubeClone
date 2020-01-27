@@ -7,3 +7,6 @@ h4,h5,h6{
 .replyButton{
     margin-right: 3%;
 }
+button{
+    border:none;
+}
