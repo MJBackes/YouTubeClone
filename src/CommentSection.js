@@ -13,12 +13,12 @@ const CommentSection = (props) => {
                     userName={props.comments.comments[i].userName}
                     commentBody={props.comments.comments[i].commentBody}
                     setComments={props.setComments}
+                    commentId={props.comments.comments[i].commentId}
+                    totalLikes={props.comments.comments[i].totalLikes}
                     comments={props.comments}
                 />
             );
         }
-    console.log("list:");
-    console.log(list);
     return (
         <div id="commentSectionContainer">
             {list}

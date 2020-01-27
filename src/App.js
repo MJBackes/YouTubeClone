@@ -34,8 +34,6 @@ function App() {
   }, [currentVideo]);
 
   useEffect(() => {
-    console.log("updated comments:");
-    console.log(comments);
     if(comments.comments && comments.comments.length > 0)
     axios.put(`http://localhost:30003/commentThreads/${currentVideo.videoId}`, comments);
   }, [comments]);

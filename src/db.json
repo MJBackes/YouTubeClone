@@ -9,13 +9,13 @@
           "commentBody": "Placeholder Text.",
           "timeOfPost": null,
           "parentCommentId": null,
-          "totalLikes": 0
+          "totalLikes": 1
         },
         {
           "commentId": "GgnClrx8N2k-2",
           "userName": "asdfasdf",
           "commentBody": "asdfasdfasdfasdf",
-          "totalLikes": 0,
+          "totalLikes": -1,
           "parentCommentId": null,
           "timeOfPost": "Mon, 27 Jan 2020 16:14:49 GMT"
         }
