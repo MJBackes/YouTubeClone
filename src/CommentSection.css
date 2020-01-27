@@ -1,0 +1,12 @@
+.commentContainer{
+    margin-bottom:1%;
+    border: aliceblue;
+    border-radius: 1px;
+    border-width: 5px;
+}
+.userName{
+    margin-bottom: 0;
+}
+.commentBody{
+    margin-top: 0;
+}

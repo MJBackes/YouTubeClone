@@ -1,0 +1,30 @@
+{
+  "commentThreads": [
+    {
+      "id": "GgnClrx8N2k",
+      "comments": [
+        {
+          "commentId": "GgnClrx8N2k-1",
+          "userName": "Placeholder",
+          "commentBody": "Placeholder Text.",
+          "timeOfPost": null,
+          "parentCommentId": null,
+          "totalLikes": 0
+        }
+      ]
+    },
+    {
+      "id": "undefined",
+      "comments": [
+        {
+          "commentId": "undefined-1",
+          "userName": "Placeholder",
+          "commentBody": "Placeholder Text.",
+          "timeOfPost": null,
+          "parentCommentId": null,
+          "totalLikes": 0
+        }
+      ]
+    }
+  ]
+}

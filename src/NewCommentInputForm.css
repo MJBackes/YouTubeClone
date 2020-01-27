@@ -1,0 +1,12 @@
+textarea{
+    width: 90%;
+    height: 80px;
+    display: block;
+    resize: none;
+}
+input{
+    display: block;
+}
+label{
+    color:aliceblue;
+}

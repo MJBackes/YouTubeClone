@@ -20,8 +20,20 @@
 }
 
 #VideoContainer{
+  margin-left: 15%;
+  height: auto;
+}
+
+#commentsHeader{
+  text-decoration: underline;
+}
+.VideoDisplayContainer{
   width:55vw;
   height:30.9375vw;
+}
+
+#CommentsContainer{
+  display: block;
   margin-left:15%;
 }
 
