@@ -61,7 +61,7 @@ function App() {
               <h3 id="commentsHeader">Comments</h3>
               <CommentSection 
                 comments={comments}
-                onClick={setComments}
+                setComments={setComments}
               />
             </div>
           </div>

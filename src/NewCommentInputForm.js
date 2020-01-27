@@ -9,7 +9,10 @@ const NewCommentInputForm = (props) => {
         parentCommentId: null,
         timeOfPost: null
     };
-    let comments = props.comments;
+    var comments = {
+        id: props.comments.id,
+        comments: props.comments.comments
+    };
     return (
         <div id="commentInputForm">
             <form onSubmit={(event) => {
@@ -19,7 +22,7 @@ const NewCommentInputForm = (props) => {
                     newComment.commentId = comments.id + "-" + (comments.comments.length + 1);
                     comments.comments.push(newComment);
                     console.log(comments);
-                    props.onClick(comments);
+                    props.setComments(comments);
                 }}>
                 <label>User Name:</label>
                 <input type="text" id="userNameInput" onChange={(event) => newComment.userName = event.target.value}/>

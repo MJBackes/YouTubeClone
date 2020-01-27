@@ -12,7 +12,7 @@ const CommentSection = (props) => {
                     timeOfPost={props.comments.comments[i].timeOfPost}
                     userName={props.comments.comments[i].userName}
                     commentBody={props.comments.comments[i].commentBody}
-                    onClick={props.onClick}
+                    setComments={props.setComments}
                     comments={props.comments}
                 />
             );
@@ -23,7 +23,7 @@ const CommentSection = (props) => {
         <div id="commentSectionContainer">
             {list}
             <NewCommentInputForm
-                onClick={props.onClick}
+                setComments={props.setComments}
                 comments={props.comments}    
             />
         </div>
