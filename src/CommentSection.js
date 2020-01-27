@@ -1,20 +1,21 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Comment from './Comment';
 import NewCommentInputForm from './NewCommentInputForm';
 import './CommentSection.css';
 const CommentSection = (props) => {
+    const [commentToReplyTo, setCommentToReplyTo] = useState(null);
+    useEffect(() => {
+        setCommentToReplyTo(null);
+    }, [props.comments]);
     let list = [];
     if(props.comments.comments)
         for(let i = 0; i < props.comments.comments.length; i++){
             list.push(
                 <Comment 
                     key={props.comments.comments[i].commentId}
-                    timeOfPost={props.comments.comments[i].timeOfPost}
-                    userName={props.comments.comments[i].userName}
-                    commentBody={props.comments.comments[i].commentBody}
+                    comment={props.comments.comments[i]}
                     setComments={props.setComments}
-                    commentId={props.comments.comments[i].commentId}
-                    totalLikes={props.comments.comments[i].totalLikes}
+                    setCommentToReplyTo={setCommentToReplyTo}
                     comments={props.comments}
                 />
             );
@@ -25,6 +26,7 @@ const CommentSection = (props) => {
             <NewCommentInputForm
                 setComments={props.setComments}
                 comments={props.comments}    
+                replyingTo = {commentToReplyTo}
             />
         </div>
     );
