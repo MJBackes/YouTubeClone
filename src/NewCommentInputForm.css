@@ -10,3 +10,6 @@ input{
 label{
     color:aliceblue;
 }
+#commentInputForm{
+    margin-top: 7%;
+}

@@ -9,13 +9,13 @@
           "commentBody": "Placeholder Text.",
           "timeOfPost": null,
           "parentCommentId": null,
-          "totalLikes": 1
+          "totalLikes": 2
         },
         {
           "commentId": "GgnClrx8N2k-2",
           "userName": "asdfasdf",
           "commentBody": "asdfasdfasdfasdf",
-          "totalLikes": -1,
+          "totalLikes": 0,
           "parentCommentId": null,
           "timeOfPost": "Mon, 27 Jan 2020 16:14:49 GMT"
         },
@@ -23,9 +23,17 @@
           "commentId": "GgnClrx8N2k-3",
           "userName": "ABCD",
           "commentBody": "ASDDFASDFJASDFAJSDF.\n:)",
-          "totalLikes": -1,
+          "totalLikes": -2,
           "parentCommentId": null,
           "timeOfPost": "Mon, 27 Jan 2020 16:39:49 GMT"
+        },
+        {
+          "commentId": "GgnClrx8N2k-4",
+          "userName": "AAAAAAAAAAAAAAAAAA",
+          "commentBody": "BBBBBBBBBBBBBBBBBBBBBBBBBBBb",
+          "totalLikes": -1,
+          "parentCommentId": "GgnClrx8N2k-3",
+          "timeOfPost": "Mon, 27 Jan 2020 17:43:14 GMT"
         }
       ]
     },
@@ -58,14 +66,7 @@
           "userName": "AASDFASd",
           "commentBody": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDd",
           "totalLikes": 0,
-          "parentCommentId": {
-            "commentId": "wIyj1XupNXs-1",
-            "userName": "ASDFA",
-            "commentBody": "ASDFADSFADf",
-            "totalLikes": 0,
-            "parentCommentId": null,
-            "timeOfPost": "Mon, 27 Jan 2020 16:45:42 GMT"
-          },
+          "parentCommentId": "wIyj1XupNXs-1",
           "timeOfPost": "Mon, 27 Jan 2020 17:18:51 GMT"
         },
         {
@@ -73,14 +74,7 @@
           "userName": "aaaaaaaaaaaaaaa",
           "commentBody": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
           "totalLikes": 0,
-          "parentCommentId": {
-            "commentId": "wIyj1XupNXs-1",
-            "userName": "ASDFA",
-            "commentBody": "ASDFADSFADf",
-            "totalLikes": 0,
-            "parentCommentId": null,
-            "timeOfPost": "Mon, 27 Jan 2020 16:45:42 GMT"
-          },
+          "parentCommentId": "wIyj1XupNXs-1",
           "timeOfPost": "Mon, 27 Jan 2020 17:21:00 GMT"
         }
       ]
@@ -108,6 +102,14 @@
           "totalLikes": 0,
           "parentCommentId": null,
           "timeOfPost": "Mon, 27 Jan 2020 16:54:52 GMT"
+        },
+        {
+          "commentId": "i-aCTpoZLsc-2",
+          "userName": "ADSFASDF",
+          "commentBody": "BBBBB",
+          "totalLikes": 0,
+          "parentCommentId": "i-aCTpoZLsc-1",
+          "timeOfPost": "Mon, 27 Jan 2020 17:40:25 GMT"
         }
       ]
     },

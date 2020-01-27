@@ -6,7 +6,7 @@ const NewCommentInputForm = (props) => {
         userName: "",
         commentBody: "",
         totalLikes: 0,
-        parentCommentId: props.replyingTo,
+        parentCommentId: props.replyingTo ? props.replyingTo.commentId : null,
         timeOfPost: null
     };
     var comments = {
@@ -44,6 +44,7 @@ const NewCommentInputForm = (props) => {
                     clearInputs();
                 }}>
                 <div className="commentContainer">
+                    <h4>Replying To:</h4>
                     <h6 className="commentPostTime">{props.replyingTo.timeOfPost}</h6>
                     <h4 className="userName">{props.replyingTo.userName}</h4>
                     <p className="commentBody">{props.replyingTo.commentBody}</p>
