@@ -12,6 +12,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState();
   const [comments, setComments] = useState({});
+  const [videoHasComments, setIfVideoHasComments] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(
     {
       title:"",
@@ -29,13 +30,21 @@ function App() {
   useEffect(() => {
     axios.get(`http://localhost:30003/commentThreads?id=${currentVideo.videoId}`)
           .then(response => {
+            setIfVideoHasComments(response.data[0] ? true : false);
             setComments(response.data[0] ? response.data[0] : {id:currentVideo.videoId, comments: []});
           });
   }, [currentVideo]);
 
   useEffect(() => {
-    if(comments.comments && comments.comments.length > 0)
-    axios.put(`http://localhost:30003/commentThreads/${currentVideo.videoId}`, comments);
+    if(comments.comments && comments.comments.length > 0){
+      if(!videoHasComments){
+        axios.post(`http://localhost:30003/commentThreads/`, comments);
+        setIfVideoHasComments(true);
+      }
+      else{
+        axios.put(`http://localhost:30003/commentThreads/${currentVideo.videoId}`, comments);
+      }
+    }
   }, [comments]);
 
   return (

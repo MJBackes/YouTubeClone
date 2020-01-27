@@ -21,8 +21,8 @@ const NewCommentInputForm = (props) => {
                     newComment.timeOfPost = now.toUTCString();
                     newComment.commentId = comments.id + "-" + (comments.comments.length + 1);
                     comments.comments.push(newComment);
-                    console.log(comments);
                     props.setComments(comments);
+                    clearInputs();
                 }}>
                 <label>User Name:</label>
                 <input type="text" id="userNameInput" onChange={(event) => newComment.userName = event.target.value}/>
@@ -35,3 +35,8 @@ const NewCommentInputForm = (props) => {
 }
 
 export default NewCommentInputForm;
+
+function clearInputs(){
+    document.getElementById("userNameInput").value = "";
+    document.getElementById("commentBodyInput").value = "";
+}
